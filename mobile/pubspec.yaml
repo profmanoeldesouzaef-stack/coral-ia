@@ -1,0 +1,32 @@
+name: coral_ia
+description: Coral vocal gerado no próprio celular a partir dos seus vídeos.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+# Faixas largas de versão de propósito: o build no CI resolve a melhor combinação
+# compatível com o Flutter estável do momento.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ">=2.6.0 <4.0.0"
+  # FFmpeg mínimo + GPL (libx264, hqdn3d). Fork mantido do ffmpeg_kit_flutter descontinuado.
+  ffmpeg_kit_flutter_new_min_gpl: ">=2.0.0 <5.0.0"
+  record: ">=5.1.0 <8.0.0"
+  just_audio: ">=0.9.40 <0.12.0"
+  image_picker: ">=1.0.0 <3.0.0"
+  video_player: ">=2.8.0 <4.0.0"
+  file_picker: ">=8.0.0 <11.0.0"
+  gal: ">=2.3.0 <4.0.0"
+  path_provider: ">=2.1.0 <3.0.0"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/ir/

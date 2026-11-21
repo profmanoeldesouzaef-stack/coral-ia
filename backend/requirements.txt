@@ -1,0 +1,18 @@
+# API
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+
+# Áudio / DSP (usados pelo Modo B — /api/v1/generate-choir)
+numpy>=1.26
+scipy>=1.13
+librosa>=0.10
+soundfile>=0.12
+
+# Separação vocal (Modo A, etapa seguinte). Não é importado pelo Modo B.
+# CPU: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+torch>=2.3
+torchaudio>=2.3
+demucs>=4.0.1
+
+# Sistema: ffmpeg no PATH (decodifica m4a/aac/mp3 do celular e gera saída AAC).

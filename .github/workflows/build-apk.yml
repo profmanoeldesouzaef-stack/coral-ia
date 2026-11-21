@@ -11,6 +11,9 @@ permissions:
 jobs:
   apk:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash  # ativa pipefail: erro antes do "| tee" falha o passo
     steps:
       - uses: actions/checkout@v4
 

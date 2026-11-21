@@ -32,7 +32,6 @@ Future<String> exportToGallery(Project p) async {
     final tail = logs.length > 400 ? logs.substring(logs.length - 400) : logs;
     throw ExportException('Falha ao gerar o vídeo.\n$tail');
   }
-  if (!await Gal.hasAccess()) await Gal.requestAccess();
   await Gal.putVideo(out, album: 'Coral IA');
   return out;
 }
